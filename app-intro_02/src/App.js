@@ -10,6 +10,9 @@ import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
  
 function App() {
   const Colaborador = lazy(() => import('./Pages/Colaborador/ColaboradorCon'));
+  const Solicitante = lazy(() => import('./Pages/Solicitante/SolicitanteCon'));
+  const TipoRequisicao = lazy(() => import('./Pages/TipoRequisicao/TipoRequisicaoCon'));
+  const Requisicao = lazy(() => import('./Pages/Requisicao/RequisicaoCon'));
   const Home = lazy(() => import('./Pages/Home/Home'));
  
   const items = [
@@ -31,6 +34,27 @@ function App() {
             window.location = '/Colaborador';
           },
         },
+        {
+          label: 'Solicitantes',
+          icon: 'pi pi-fw pi-user',
+          command: () => {
+            window.location = '/Solicitante';
+          },
+        },
+        {
+          label: 'TipoRequisicoes',
+          icon: 'pi pi-fw pi-user',
+          command: () => {
+            window.location = '/TipoRequisicao';
+          },
+        },
+        {
+          label: 'Requisicoes',
+          icon: 'pi pi-fw pi-user',
+          command: () => {
+            window.location = '/Requisicao';
+          },
+        },
       ],
     },
     {
@@ -48,6 +72,9 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/Colaborador" element={<Colaborador />} />
+            <Route path="/Solicitante" element={<Solicitante />} />
+            <Route path="/TipoRequisicao" element={<TipoRequisicao />} />
+            <Route path="/Requisicao" element={<Requisicao />} />
           </Routes>
         </Suspense>
       </div>
@@ -76,6 +103,27 @@ function Menu () {
           icon: 'pi pi-fw pi-user',
           command: () => {
             window.location = '/Colaborador';
+          },
+        },
+        {
+          label: 'Solicitantes',
+          icon: 'pi pi-fw pi-user',
+          command: () => {
+            window.location = '/Solicitante';
+          },
+        },
+        {
+          label: 'TipoRequisicoes',
+          icon: 'pi pi-fw pi-user',
+          command: () => {
+            window.location = '/TipoRequisicao';
+          },
+        },
+        {
+          label: 'Requisicoes',
+          icon: 'pi pi-fw pi-user',
+          command: () => {
+            window.location = '/Requisicao';
           },
         },
       ],
